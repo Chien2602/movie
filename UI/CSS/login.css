@@ -1,0 +1,157 @@
+/* Đặt kiểu dáng cho body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../ASSEST/IMAGE/background-login.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Kiểu dáng cho hộp đăng nhập */
+.login-container {
+    background-color: rgba(151, 161, 147, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Kiểu dáng cho hình ảnh đại diện */
+.login-container img.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+}
+
+/* Kiểu dáng cho các nhãn */
+label {
+    color: #dddddd;
+    font-weight: bold;
+}
+
+/* Kiểu dáng cho nhóm nhập liệu */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Kiểu dáng cho trường nhập liệu */
+.input-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Kiểu dáng cho biểu tượng trong trường nhập liệu */
+.input-field i {
+    position: absolute;
+    left: 10px;
+    color: #888888;
+}
+
+/* Kiểu dáng cho ô nhập liệu */
+.input-field input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    margin-top: 5px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Kiểu dáng cho ô nhập liệu khi được chọn */
+.input-field input:focus {
+    border-color: #007bff;
+}
+
+/* Kiểu dáng cho liên kết */
+.link {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* Kiểu dáng cho liên kết */
+.link a {
+    color: #a5afd3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Kiểu dáng cho liên kết khi di chuột qua */
+.link a:hover {
+    text-decoration: underline;
+}
+
+/* Kiểu dáng cho nút gửi */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 130px;
+    font-size: 16px;
+}
+
+/* Kiểu dáng cho nút gửi khi di chuột qua */
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Đảm bảo body có độ dài đủ để hiển thị hiệu ứng */
+.fade-out {
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ để tạo hiệu ứng làm mờ */
+    transition: background-color 0.5s; /* Thay đổi màu nền với hiệu ứng chuyển tiếp */
+}
+
+/* Thiết lập hiệu ứng lật trang */
+.page-flip {
+    perspective: 1000px; /* Tạo chiều sâu cho hiệu ứng lật trang */
+}
+
+.flip-container {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của trang */
+    height: 100%; /* Chiếm toàn bộ chiều cao của trang */
+    position: absolute; /* Đặt ở vị trí tuyệt đối */
+    transform-style: preserve-3d; /* Giữ các mặt của khối 3D trong không gian */
+    transition: transform 0.5s; /* Thay đổi biến dạng với hiệu ứng chuyển tiếp */
+}
+
+/* Khi lớp flip được thêm vào, khối sẽ lật */
+.flip-container.flip {
+    transform: rotateY(180deg); /* Lật trang 180 độ quanh trục Y */
+}
+
+/* Đặt các mặt của khối 3D */
+.flip-container .flip-content {
+    backface-visibility: hidden; /* Ẩn mặt sau của khối khi lật */
+    position: absolute; /* Đặt ở vị trí tuyệt đối */
+    width: 100%; /* Chiếm toàn bộ chiều rộng của khối */
+    height: 100%; /* Chiếm toàn bộ chiều cao của khối */
+}
+
+/* Mặt trước của khối */
+.flip-container .front {
+    background-color: white; /* Màu nền của mặt trước */
+}
+
+/* Mặt sau của khối */
+.flip-container .back {
+    background-color: white; /* Màu nền của mặt sau */
+    transform: rotateY(180deg); /* Đặt mặt sau lật 180 độ để nó nằm ở phía sau mặt trước */
+}
